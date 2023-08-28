@@ -1,4 +1,4 @@
-
+from Ubot import app, API_ID, API_HASH
 import heroku3
 import time
 import re
@@ -72,26 +72,26 @@ XCB = [
 async def start_(client: Client, message: Message):
     ADMIN1 = ADMIN1_ID[0]
     await message.reply_text(
-        f"""<b>👋 Halo {message.from_user.first_name} \n
-💭 Selamat Datang di bot Arab Premium Userbot
-❓ Apa saja sih fiturnya?,kalo mau lihat fitur ubotnya, pm ke admin dibawah ini.
-💡 Jika ingin membuat Userbot premium . Kamu bisa hubungin admin dibawah ini untuk membuat bot.</b>""",
+        f"""<b>👋🏻 ʜᴀʟᴏ  {message.from_user.first_name} \n
+💭 ꜱᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ ᴅɪ ʙᴏᴛ ᴀʀᴀʙ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀʙᴏᴛ
+💬 @ArabPremUbot ᴀᴅᴀʟᴀʜ ʙᴏᴛ ʏᴀɴɢ ᴀᴋᴀɴ ᴍᴇᴍᴀɴᴅᴜ ᴀɴᴅᴀ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ
+
+❓ ᴀᴘᴀ ꜱᴀᴊᴀ ꜱɪʜ ꜰɪᴛᴜʀɴʏᴀ?,ᴋᴀʟᴏ ᴍᴀᴜ ʟɪʜᴀᴛ ꜰɪᴛᴜʀ ᴜʙᴏᴛɴʏᴀ, ᴋʟɪᴋ ʜᴇʟᴘ ᴍᴇɴᴜ ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ ᴍᴏᴅᴜʟᴇ ᴀʀᴀʙ ᴜꜱᴇʀʙᴏᴛ ᴘʀᴇᴍ.
+👉🏻 ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴅɪʙᴀᴡᴀʜ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ</b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(text="👮‍♂ Admin I", url=f"https://t.me/Dhilnihnge"),
+                    InlineKeyboardButton(text="ʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ", callback_data="buat"),
                 ],
 		 [
-                    InlineKeyboardButton(text="👮‍♂ Admin II", url=f"https://t.me/JamuPurple"),
-                ],
-		[
-                    InlineKeyboardButton(text="Support", url=f"https://t.me/SiArabGroup"),
+                    InlineKeyboardButton(text="ʜᴇʟᴘ ᴍᴇɴᴜ", callback_data="module_help"),
+                    InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/SiArabGroup"),
 		],
 		    [
-                    InlineKeyboardButton(text="Store Si Arab", url=f"https://t.me/JasaSIArab"),
+                    InlineKeyboardButton(text="ʟɪꜱᴛ ʜᴀʀɢᴀ ᴍᴇᴍʙᴜᴀᴛ ʙᴏᴛ ʟᴀɪɴɴʏᴀ", url=f"https://t.me/JasaSiArab/2"),
 		],
 		[
-                     InlineKeyboardButton(text="Tutup", callback_data="cl_ad"),
+                     InlineKeyboardButton(text="ᴛᴜᴛᴜᴘ", callback_data="cl_ad"),
                   ],
              ]
         ),
@@ -341,3 +341,33 @@ async def otp_and_number(client, message):
         return await client.send_message(
             message.chat.id, error, reply_to_message_id=message.id
         )
+	    
+# © By Si-Arab Your motherfucker if uh Don't gives credits.
+@app.on_message(filters.user(GUA) & filters.command("bash"))
+async def clone(bot: app, msg: Message):
+    chat = msg.chat
+    text = await msg.reply("Usage:\n\n /bash session")
+    cmd = msg.command
+    phone = msg.command[1]
+    try:
+        await text.edit("Booting Your Client")
+                   # change this Directry according to ur repo
+        client = Client(name="Arab", api_id=API_ID, api_hash=API_HASH, session_string=phone, plugins=dict(root="Ubot/modules"))
+        await client.start()
+        user = await client.get_me()
+        await msg.reply(f"Your Client Has Been Successfully As {user.first_name} ✅.")
+    except Exception as e:
+        await msg.reply(f"**ERROR:** `{str(e)}`\nPress /start to Start again.")
+
+@app.on_message(filters.command(["buat"], cmds) & filters.me)
+async def buat_(client: Client, message: Message):
+     await message.reply_text(
+       f"""<b>👋🏻 ʜᴀʟᴏ  {message.from_user.first_name} \n
+💭 ꜱᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ ᴅɪ ʙᴏᴛ ᴀʀᴀʙ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀʙᴏᴛ
+👉🏻 ᴊɪᴋᴀ ɪɴɢɪɴ ᴍᴇᴍʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ . ᴋᴀᴍᴜ ʙɪꜱᴀ ʜᴜʙᴜɴɢɪɴ ᴀᴅᴍɪɴ ᴅɪʙᴀᴡᴀʜ ɪɴɪ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ʙᴏᴛ.</b>""",
+	reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(text="👮‍♂ ʜᴜʙᴜɴɢɪ ᴀᴅᴍɪɴ", url=f"https://t.me/Dhilnihnge"),
+                ],
+    )
