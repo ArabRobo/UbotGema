@@ -4,7 +4,6 @@ import time
 import re
 import asyncio
 import math
-import Ubot.modules
 import shutil
 import sys
 import dotenv
@@ -12,6 +11,7 @@ import datetime
 import os
 import requests
 import urllib3
+from Ubot import app, CMD_HELP, cmds
 from dotenv import load_dotenv
 from os import environ, execle, path
 from datetime import datetime, timedelta
@@ -86,7 +86,7 @@ async def start_(client: Client, message: Message):
                     InlineKeyboardButton(text="ʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ", callback_data="buat"),
                 ],
 		 [
-                    InlineKeyboardButton(text="ʜᴇʟᴘ ᴍᴇɴᴜ", callback_data="help_back"),
+                    InlineKeyboardButton(text="ʜᴇʟᴘ ᴍᴇɴᴜ", callback_data="CMD_HELP"),
                     InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/SiArabGroup"),
 		],
 		    [
