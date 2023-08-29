@@ -370,4 +370,4 @@ async def buat_(client: Client, message: Message):
                 [
                     InlineKeyboardButton(text="👮‍♂ ʜᴜʙᴜɴɢɪ ᴀᴅᴍɪɴ", url=f"https://t.me/Dhilnihnge"),
                 ],
-    """,))
+    """,)
