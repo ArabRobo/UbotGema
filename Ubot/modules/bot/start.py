@@ -4,6 +4,7 @@ import time
 import re
 import asyncio
 import math
+import Ubot.modules
 import shutil
 import sys
 import dotenv
