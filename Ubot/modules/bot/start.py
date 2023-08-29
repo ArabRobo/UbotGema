@@ -77,6 +77,7 @@ async def start_(client: Client, message: Message):
 💬 @ArabPremUbot ᴀᴅᴀʟᴀʜ ʙᴏᴛ ʏᴀɴɢ ᴀᴋᴀɴ ᴍᴇᴍᴀɴᴅᴜ ᴀɴᴅᴀ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ
 
 ❓ ᴀᴘᴀ ꜱᴀᴊᴀ ꜱɪʜ ꜰɪᴛᴜʀɴʏᴀ?,ᴋᴀʟᴏ ᴍᴀᴜ ʟɪʜᴀᴛ ꜰɪᴛᴜʀ ᴜʙᴏᴛɴʏᴀ, ᴋʟɪᴋ ʜᴇʟᴘ ᴍᴇɴᴜ ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ ᴍᴏᴅᴜʟᴇ ᴀʀᴀʙ ᴜꜱᴇʀʙᴏᴛ ᴘʀᴇᴍ.
+
 👉🏻 ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴅɪʙᴀᴡᴀʜ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ</b>""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -84,7 +85,7 @@ async def start_(client: Client, message: Message):
                     InlineKeyboardButton(text="ʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ", callback_data="buat"),
                 ],
 		 [
-                    InlineKeyboardButton(text="ʜᴇʟᴘ ᴍᴇɴᴜ", callback_data="module_help"),
+                    InlineKeyboardButton(text="ʜᴇʟᴘ ᴍᴇɴᴜ", callback_data="help_back"),
                     InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/SiArabGroup"),
 		],
 		    [
