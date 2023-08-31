@@ -9,7 +9,7 @@ load_dotenv(".env")
 
 API_ID = int(getenv("API_ID", "12857763")) #optional
 API_HASH = getenv("API_HASH", "7b71e8bca0d5e1c6d8383ae818d9ec8d") #optional
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "1345594412").split()))
+SUDO_USERS = list(map(int, getenv("SUDO_USERS", "1948147616").split()))
 DEEP_AI = getenv("DEEP_AI", "d7394561-0528-4714-a1ee-edd7020b48e1")
 OWNER_ID = int(getenv("OWNER_ID", "1345594412") or 0)
 ADMIN1_ID = list(map(int, getenv("ADMIN1_ID", "1345594412").split()))
@@ -18,13 +18,13 @@ ADMIN3_ID = list(map(int, getenv("ADMIN2_ID", "0").split()))
 ADMIN4_ID = list(map(int, getenv("ADMIN2_ID", "0").split()))
 
 
-ADMIN1_ID.append(1345594412)
+ADMIN1_ID.append(1948147616)
 ADMIN2_ID.append(0)
 ADMIN3_ID.append(0)
 ADMIN4_ID.append(0)
 
 MONGO_URL = getenv("MONGO_URL", "mongodb+srv://fadhil01:fadhil123@fadhil01.s6lkqsq.mongodb.net/?retryWrites=true&w=majority")
-BOT_TOKEN = getenv("BOT_TOKEN", "6370400384:AAFwvY0EFJy3fbsGccEXLJZT_iMJcgrGqKY")
+BOT_TOKEN = getenv("BOT_TOKEN", "6484534684:AAFhc381-zhXgXLXG9eNf37ED4DDafZc1yc")
 BOT_WORKERS = int(getenv("BOT_WORKERS", "2"))
 USER_WORKERS = int(getenv("BOT_WORKERS", "8"))
 PM_AUTO_BAN = strtobool(getenv("PM_AUTO_BAN", "True"))
@@ -42,8 +42,8 @@ REPO_URL = getenv("REPO_URL", "https://github.com/fadhilabdat04/ProjectArabUbot0
 CMD_HNDLR = getenv("CMD_HNDLR", ".")
 SUPPORT = int(getenv("SUPPORT", "-1001803314750"))
 CHANNEL = int(getenv("CHANNEL", "-1001681544718"))
-SESSION1 = getenv("SESSION1", "BQAhIHQAY6wqB6WJraKEcNoaL5CkSd400-smaRgk3hSwUCvTei638o5clwtLUnyhsTA975tz5o01jE2-3yfzxJkV47spYqGyhV7M7xw0vdzhbdX0RU8FoEPWqBjKqdg1ZQwF-CnCufYQ46fgRcNZbFCIARl5vbl1zIgY6R3ZtpMYnuG1eT-aVNpVaomITlJ37UcRzBoC936_thb8Vg_DXte9iueVf1Y3eDGopOp26h0MBxglruuXwHKa3V8RtIham39RFSmuFQLUO5gXqm8CMCdUZd5n-dN_5GDEi2Vp-ZEjn7UUfzWtZcFzDsZjTSZKrEXUuZyBHLCobeko0VwJ1gmYIu59vwAAAABQNCQsAA")
-SESSION2 = getenv("SESSION2", "BQFSFokAoUNmJ8b7TVQtQ1R1QhkjgQD-7RXIFpbxoRgG6RldZx3Zgb7fOJpDNOvuhED81PrxJ49reSaLt6s1J8BLU_UijP0Vpck9ErgBVODgqa49kWiSZ7slHMykGY-Zl1G6Tda7s5G1pn5dH3YZId6a0i6jbsOKQPkouvQxM6cezFkmmluOlJ1N5YaWLO8U7ILOFPRnHeBr819wcEn7zvI0hFbJUuLVThwKIrZA4Taq6RLav18ggEaglvAmXi0GXnsbKVEn1JxlIwotD7Y6ineAruqMIRr_nQ8L79uZZ_N7zJmmHU58YWdF4-lPQvybse2yk4zl-_97-DqjCOa7eNcKJVz7OwAAAABj_4SYAA")
+SESSION1 = getenv("SESSION1", "")
+SESSION2 = getenv("SESSION2", "")
 SESSION3 = getenv("SESSION3", "")
 SESSION4 = getenv("SESSION4", "")
 SESSION5 = getenv("SESSION5", "")
