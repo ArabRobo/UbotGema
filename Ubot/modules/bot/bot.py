@@ -131,3 +131,7 @@ async def close(_, query: CallbackQuery):
                 ],
 	    ]
     ))
+
+@app.on_callback_query(filters.regex("help_u"))
+async def close(_, query: CallbackQuery):
+    await query.helper()
