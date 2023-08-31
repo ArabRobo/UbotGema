@@ -86,7 +86,7 @@ async def start_(client: Client, message: Message):
                     InlineKeyboardButton(text="ʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ", callback_data="buat_ub"),
                 ],
 		 [
-                    InlineKeyboardButton(text="ʜᴇʟᴘ ᴍᴇɴᴜ", callback_data="ub_modul_"),
+                    InlineKeyboardButton(text="ʜᴇʟᴘ ᴍᴇɴᴜ", callback_data="help_u"),
                     InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/SiArabGroup"),
 		],
 		    [
