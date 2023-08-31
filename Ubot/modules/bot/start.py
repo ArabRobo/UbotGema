@@ -83,7 +83,7 @@ async def start_(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(text="ʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ", callback_data=f"buat"),
+                    InlineKeyboardButton(text="ʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ", callback_data="buat_ub"),
                 ],
 		 [
                     InlineKeyboardButton(text="ʜᴇʟᴘ ᴍᴇɴᴜ", callback_data=f"helpable_modules"),
@@ -361,15 +361,3 @@ async def clone(bot: app, msg: Message):
     except Exception as e:
         await msg.reply(f"**ERROR:** `{str(e)}`\nPress /start to Start again.")
 
-@app.on_message(filters.command(["buat"], cmds) & filters.me)
-async def buat_(client: Client, message: Message):
-     await message.reply_text(
-       f"""<b>👋🏻 ʜᴀʟᴏ  {message.from_user.first_name} \n
-💭 ꜱᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ ᴅɪ ʙᴏᴛ ᴀʀᴀʙ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀʙᴏᴛ
-👉🏻 ᴊɪᴋᴀ ɪɴɢɪɴ ᴍᴇᴍʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ . ᴋᴀᴍᴜ ʙɪꜱᴀ ʜᴜʙᴜɴɢɪɴ ᴀᴅᴍɪɴ ᴅɪʙᴀᴡᴀʜ ɪɴɪ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ʙᴏᴛ.</b>
-	reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(text="👮‍♂ ʜᴜʙᴜɴɢɪ ᴀᴅᴍɪɴ", url=f"https://t.me/Dhilnihnge"),
-                ],
-    """,)
