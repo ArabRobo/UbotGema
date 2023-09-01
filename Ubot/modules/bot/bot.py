@@ -133,11 +133,13 @@ async def close(_, query: CallbackQuery):
     ))
 
 @app.on_callback_query(filters.regex("help_u"))
-async def module_help(_, callback_query: CallbackQuery):
-class Data:
-
-    text_help_menu = (
-        f"**Help Menu**\n**• Prefixes** : `. ! ?`"
-    )
-    reopen = [[InlineKeyboardButton("Open", callback_data="reopen")]]
-   
+async def _callbacks(_, callback_query: CallbackQuery):
+    query = callback_query.data.lower()
+    bot_me = await app.get_me()
+    if query == "helper":
+        buttons = paginate_help(0, CMD_HELP, "helpme")
+        await app.edit_inline_text(
+            callback_query.inline_message_id,
+            Data.text_help_menu,
+            reply_markup=InlineKeyboardMarkup(buttons),
+        )
