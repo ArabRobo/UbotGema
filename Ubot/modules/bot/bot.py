@@ -133,13 +133,12 @@ async def close(_, query: CallbackQuery):
     ))
 
 @app.on_callback_query(filters.regex("help_u"))
-async def _callbacks(_, callback_query: CallbackQuery):
-    query = callback_query.data.lower()
-    bot_me = await app.get_me()
-    if query == "helper":
-        buttons = paginate_help(0, CMD_HELP, "helpme")
-        await app.edit_inline_text(
-            callback_query.inline_message_id,
-            Data.text_help_menu,
-            reply_markup=InlineKeyboardMarkup(buttons),
-        )
+@ratelimiter
+async def commands_callbacc(_, cb: CallbackQuery):
+    text, keyb = await help_parser(cb.from_user.mention)
+    await app.send_message(
+        cb.message.chat.id,
+        text=text,
+        reply_markup=keyb,
+    )
+    await cb.message.delete_msg()
