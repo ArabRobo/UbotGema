@@ -137,7 +137,8 @@ async def close(_, query: CallbackQuery):
 async def commands_callbacc(_, cb: CallbackQuery):
     buttons = paginate_help(0, CMD_HELP, "helpme")
     await app.edit_inline_text(
-        callback_query.inline_message_id,
+        callback_query.matches[0].group(1)
+    commands: dict = CMD_HELP[modul_name]
         Data.text_help_menu,
     )
     await cb.message.delete_msg()
