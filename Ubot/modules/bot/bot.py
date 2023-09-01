@@ -133,7 +133,7 @@ async def close(_, query: CallbackQuery):
     ))
 
 @app.on_callback_query(filters.regex("help_u"))
-@ratelimiter
+# @cb_wrapper
 async def commands_callbacc(_, cb: CallbackQuery):
     text, keyb = await help_parser(cb.from_user.mention)
     await app.send_message(
