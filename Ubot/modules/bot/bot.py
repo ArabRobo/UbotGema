@@ -1,13 +1,3 @@
-import asyncio
-
-from prettytable import PrettyTable
-from pyrogram import Client, enums, filters
-from pyrogram.types import Message
-from ubotlibs.ubot import Ubot, Devs
-from ubotlibs.ubot.helper.PyroHelpers import ReplyCheck
-from ubotlibs.ubot.helper.utility import split_list
-from Ubot import app, CMD_HELP, cmds
-from . import *
 
 import traceback
 import re
