@@ -77,7 +77,7 @@ async def ay(client, message):
             ]
         ),
         False,
-        caption=f"Upload by {client.me.mention}",
+        caption=f"Nih Cewenya {client.me.mention}",
     )
 
     await rizky.delete()
