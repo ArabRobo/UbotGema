@@ -51,21 +51,21 @@ async def extract_all_aud(client, message):
     babi = await message.reply("`Downloading Video . . .`")
     ext_out_path = os.getcwd() + "/" + "downloads/py_extract/audios"
     if not replied_msg:
-        await babi.edit("**Mohon Balas Ke Video**")
+        await babi.edit("**Mohon Balas Pesan Ke Video**")
         return
     if not replied_msg.video:
-        await babi.edit("**Mohon Balas Ke Video**")
+        await babi.edit("**Mohon Balas Pesan Ke Video**")
         return
     if os.path.exists(ext_out_path):
-        await babi.edit("Processing.....")
+        await babi.edit("Lagi Di Prosess.....")
         return
     replied_video = replied_msg.video
     try:
-        await babi.edit("`Downloading...`")
+        await babi.edit("`Lagi Ngedownload...`")
         ext_video = await client.download_media(message=replied_video)
         await babi.edit("`Extracting Audio(s)...`")
         exted_aud = Video_tools.extract_all_audio(input_file=ext_video, output_path=ext_out_path)
-        await babi.edit("`Uploading...`")
+        await babi.edit("`Lagi Ngeupload...`")
         for nexa_aud in exted_aud:
             await message.reply_audio(audio=nexa_aud, caption=f"`Extracted by` {(await client.get_me()).mention}")
         await babi.edit("`Extracting Finished!`")
@@ -101,7 +101,7 @@ async def epek(client, message):
             await message.reply(f"Silahkan isi sesuai {tau}")
     else:
         await Tm.edit(
-            f"Silahkan balas ke audio atau mp3, contoh : <code>!efek bengek</code> sambil balas ke audio atau mp3"
+            f"Silahkan balas pesan ke audio atau mp3, contoh : <code>!efek bengek</code> sambil balas ke audio atau mp3"
         )
         
 add_command_help(
