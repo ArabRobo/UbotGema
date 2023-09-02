@@ -17,9 +17,9 @@ async def join(client: Client, message: Message):
     g = await message.reply_text("`Processing...`")
     try:
         await client.join_chat(tex)
-        await g.edit(f"**Successfully Joined Chat ID** `{tex}`")
+        await g.edit(f"✅**Berhasil Join Obrolan Dengan Chat ID** `{tex}`")
     except Exception as ex:
-        await g.edit(f"**ERROR:** \n\n{str(ex)}")
+        await g.edit(f"⛔️**ERROR:** \n\n{str(ex)}")
 
 
 @Ubot(["leave"], cmds)
@@ -27,10 +27,10 @@ async def leave(client: Client, message: Message):
     xd = message.command[1] if len(message.command) > 1 else message.chat.id
     xv = await message.reply_text("`Processing...`")
     try:
-        await xv.edit_text(f"{client.me.first_name} has left the group, bye!!")
+        await xv.edit_text(f"✅ {client.me.first_name} Telah Meninggalkan Group Chat, bye!!")
         await client.leave_chat(xd)
     except Exception as ex:
-        await xv.edit_text(f"**ERROR:** \n\n{str(ex)}")
+        await xv.edit_text(f"⛔️**ERROR:** \n\n{str(ex)}")
 
 
 @Ubot(["leaveallgc"], cmds)
@@ -47,7 +47,7 @@ async def kickmeall(client: Client, message: Message):
             except BaseException:
                 er += 1
     await tex.edit(
-        f"**Successfully left {done} Groups, Failed to left {er} Groups**"
+        f"✅**Successfully left {done} Groups, Failed to left {er} Groups**"
     )
 
 
@@ -65,7 +65,7 @@ async def kickmeallch(client: Client, message: Message):
             except BaseException:
                 er += 1
     await ok.edit(
-        f"**Successfully left {done} Channel, failed to left {er} Channel**"
+        f"✅**Successfully left {done} Channel, failed to left {er} Channel**"
     )
 
 
