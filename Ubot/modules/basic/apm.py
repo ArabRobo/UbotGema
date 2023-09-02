@@ -78,7 +78,7 @@ async def deny(client, message):
     biji = message.from_user.first_name
     chat_id = message.chat.id
     await set.deny_user(chat_id)
-    await message.edit(f"**Saya belum menyetujui [Anda](tg://user?id={chat_id}) untuk mengirim pesan.**")
+    await message.edit(f"**Tuan saya belum menyetujui [Anda](tg://user?id={chat_id}) untuk mengirim pesan.**")
 
 
 @Client.on_message(
@@ -103,7 +103,7 @@ async def reply_pm(client, message):
             await set.allow_user(chat_id) 
             await client.send_message(
                 chat_id,
-                f"<b>Menerima Pesan!!!</b>\n{biji} <b>Terdeteksi Developer Arab-Premium</b>",
+                f"<b>Menerima Pesan!!!</b>\n{biji} <b>Terdeteksi Developer ArabUserbot-Premium</b>",
                 parse_mode=enums.ParseMode.HTML,
             )
         except:
