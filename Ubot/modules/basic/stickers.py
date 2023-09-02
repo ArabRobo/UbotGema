@@ -281,7 +281,7 @@ async def kang(client: Client, message: Message):
             await client.send_message("Stickers", packname)
             await asyncio.sleep(2)
         await um.edit(
-            f"**Sticker Added Successfully!**\n**[CLICK HERE](https://t.me/addstickers/{packname})**"
+            f"**Sticker Lu Udah Jadi Nih Mek!**\n\n**[•----- ᴄʟɪᴄᴋ ʜᴇʀᴇ -----•](https://t.me/addstickers/{packname})**"
         )
         if os.path.exists(str(media_)):
             os.remove(media_)
