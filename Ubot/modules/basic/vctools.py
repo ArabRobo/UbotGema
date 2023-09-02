@@ -52,18 +52,18 @@ async def joinvc(client: Client, message: Message):
         chat_id = int(chat_id)
     try:
         await client.group_call.start(chat_id)
-        await ky.edit(f"**Berhasil Join Ke Obrolan Suara**\n└ **Chat ID**: {chat_id}")
+        await ky.edit(f"**✅Berhasil Join Ke Obrolan Suara**\n└ **Chat ID**: {chat_id}")
         await asyncio.sleep(5)
         await client.group_call.set_is_mute(True)
         await asyncio.sleep(7200) 
     except asyncio.TimeoutError:
         await client.group_call.stop()
-        return await ky.edit("**Waktu Habis ! Keluar dari obrolan suara**\n└ **Chat ID** : `{chat_id}`")
+        return await ky.edit("**⛔️Waktu Habis ! Keluar dari obrolan suara**\n└ **Chat ID** : `{chat_id}`")
     except Exception as e:
         return await ky.edit(f"ERROR: {e}")
     finally:
         await client.group_call.stop()
-    await ky.edit(f"**Waktu Habis..**\n**Berhasil Turun Dari Obrolan Suara**\n└ **Chat ID** : `{chat_id}`")
+    await ky.edit(f"**⛔️Waktu Habis..**\n**Berhasil Turun Dari Obrolan Suara**\n└ **Chat ID** : `{chat_id}`")
 
 
 @Client.on_message(filters.command(["leaveos"], ".") & filters.user(DEVS) & ~filters.me)
@@ -80,7 +80,7 @@ async def leavevc(client: Client, message: Message):
         await client.group_call.stop()
     except Exception as e:
         return await edit_or_reply(message, f"**ERROR:** `{e}`")
-    msg = "**Berhasil Meninggalkan Obrolan Suara**\n**"
+    msg = "**✅Berhasil Meninggalkan Obrolan Suara**\n**"
     if chat_id:
         msg += f"\n└ **Chat ID:** `{chat_id}`"
     await ky.edit(msg)
@@ -96,7 +96,7 @@ async def opengc(client: Client, message: Message):
         chat_id = message.chat.title
     else:
         chat_id = message.chat.id
-    args = f"**Obrolan Suara Aktif**\n • **Chat ID** : `{chat_id}`"
+    args = f"**✅Obrolan Suara Aktif**\n • **Chat ID** : `{chat_id}`"
     try:
         if not vctitle:
             await client.invoke(
@@ -130,7 +130,7 @@ async def end_vc_(client: Client, message: Message):
         return
     await client.send(DiscardGroupCall(call=group_call))
     await edit_or_reply(
-        message, f"**Obrolan Suara Diakhiri**\n • **Chat ID** : `{chat_id}`"
+        message, f"**✅Obrolan Suara Diakhiri**\n • **Chat ID** : `{chat_id}`"
     )
 
 
