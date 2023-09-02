@@ -44,7 +44,7 @@ async def asupan(client: Client, message: Message):
 async def asupin(client: Client, message: Message):
     if message.chat.id in BL_UBOT:
         return await message.reply("**Tidak bisa di gunakan di Group Support**")
-    ran = await message.edit("`Mencari bahan... 🔎`")
+    ran = await message.edit("`Mencari bokep... 🔎`")
     await gather(
         ran.delete(),
         client.send_video(
@@ -98,7 +98,7 @@ async def pcp(client, message):
             ]
         ),
         False,
-        caption=f"Upload by {client.me.mention}",
+        caption=f"Nih Photo PPCP nya mek {client.me.mention}",
     )
 
     await darmi.delete()
@@ -119,7 +119,7 @@ async def cp(client, message):
             ]
         ),
         False,
-        caption=f"Upload by {client.me.mention}",
+        caption=f"Nih photo PPCP2 nya mek {client.me.mention}",
     )
 
     await dar.delete()
@@ -140,7 +140,7 @@ async def anim(client, message):
             ]
         ),
         False,
-        caption=f"Upload by {client.me.mention}",
+        caption=f"Nih Photo Animenya Mek {client.me.mention}",
     )
 
     await iis.delete()
@@ -161,7 +161,7 @@ async def nimek(client, message):
             ]
         ),
         False,
-        caption=f"Upload by {client.me.mention}",
+        caption=f"Nih Photo Anime2 nya Mek {client.me.mention}",
     )
 
     await erna.delete()
@@ -182,7 +182,7 @@ async def sange(client, message):
             ]
         ),
         False,
-        caption=f"Upload by {client.me.mention}",
+        caption=f"Nih Photo Bugilnya Mek {client.me.mention}",
     )
 
     await kntl.delete()
@@ -202,7 +202,7 @@ async def bugil(client, message):
             ]
         ),
         False,
-        caption="**Buat Kamu..**",
+        caption="**Pap Buat Kamu..**",
     )
 
     await kazu.delete()
