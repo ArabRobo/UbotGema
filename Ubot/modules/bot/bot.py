@@ -121,17 +121,80 @@ async def on_plug_next_in_cb(_, callback_query: CallbackQuery):
 @app.on_callback_query(filters.regex("buat_ub"))
 async def close(_, query: CallbackQuery):
     await query.message.reply_text(
-       f"""<b>👋🏻 ʜᴀʟᴏ ɴɢᴇ sᴀʜᴀʙᴀᴛ @ArabPremUbot .\n
+       f"""<b>👋🏻 ʜᴀʟᴏ ɴɢᴇ sᴀʜᴀʙᴀᴛ @ArabStore_Robot .\n
 💭 ꜱᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ ᴅɪ ʙᴏᴛ ᴀʀᴀʙ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀʙᴏᴛ\n
-👉🏻 ᴊɪᴋᴀ ɪɴɢɪɴ ᴍᴇᴍʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ . ᴋᴀᴍᴜ ʙɪꜱᴀ ʜᴜʙᴜɴɢɪɴ ᴀᴅᴍɪɴ ᴅɪʙᴀᴡᴀʜ ɪɴɪ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ʙᴏᴛ.</b>""",
+👉🏻 ᴊɪᴋᴀ ɪɴɢɪɴ ᴍᴇᴍʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ . ᴋᴀᴍᴜ ʙɪꜱᴀ ʜᴜʙᴜɴɢɪɴ ᴀᴅᴍɪɴ ᴅɪʙᴀᴡᴀʜ ɪɴɪ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ʙᴏᴛ.\n
+ᴊɪᴋᴀ ᴀɴᴅᴀ ʟɪᴍɪᴛ ᴅᴀɴ ᴛɪᴅᴀᴋ ʙɪsᴀ ᴍᴇɴɢʜᴜʙᴜɴɢɪ ᴀᴅᴍɪɴ ᴀɴᴅᴀ ʙɪsᴀ ᴍᴇʟᴀʟᴜɪ ʙᴏᴛ ʟɪᴍɪᴛ ᴏʀᴅᴇʀ ᴀʀᴀʙ sᴛᴏʀᴇ</b>""",
 	reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(text="👮‍♂ ʜᴜʙᴜɴɢɪ ᴀᴅᴍɪɴ", url=f"https://t.me/Dhilnihnge"),
+                    InlineKeyboardButton(text="🧑🏻‍💻 ʜᴜʙᴜɴɢɪ ᴀᴅᴍɪɴ", url=f"https://t.me/Dhilnihnge"),
+                ],
+	    ]
+	    [
+                [
+                    InlineKeyboardButton(text="🤖 ʟɪᴍɪᴛ ʙᴏᴛ ᴏʀᴅᴇʀ", url=f"https://t.me/SiArabLimitBot"),
                 ],
 	    ]
     ))
 
+@app.on_callback_query(filters.regex("store"))
+async def close(_, query: CallbackQuery):
+    await query.message.reply_text(
+       f"""<b>👋🏻 ʜᴀʟᴏ ɴɢᴇ sᴀʜᴀʙᴀᴛ @ArabStore_Robot .\n
+💭 ꜱᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ ᴅɪ ʙᴏᴛ ᴀʀᴀʙ sᴛᴏʀᴇ ʙᴏᴛ\n
+👉🏻 ᴊɪᴋᴀ ɪɴɢɪɴ ᴍᴇᴍʙᴜᴀᴛ ʙᴏᴛ ᴅɪ ᴀʀᴀʙ sᴛᴏʀᴇ. ᴋᴀᴍᴜ ʙɪꜱᴀ ʜᴜʙᴜɴɢɪɴ ᴀᴅᴍɪɴ ᴅɪʙᴀᴡᴀʜ ɪɴɪ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ʙᴏᴛ.\n
+ᴊɪᴋᴀ ᴀɴᴅᴀ ʟɪᴍɪᴛ ᴅᴀɴ ᴛɪᴅᴀᴋ ʙɪsᴀ ᴍᴇɴɢʜᴜʙᴜɴɢɪ ᴀᴅᴍɪɴ ᴀɴᴅᴀ ʙɪsᴀ ᴍᴇʟᴀʟᴜɪ ʙᴏᴛ ʟɪᴍɪᴛ ᴏʀᴅᴇʀ ᴀʀᴀʙ sᴛᴏʀᴇ</b>""",
+	reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(text="🧑🏻‍💻 ʜᴜʙᴜɴɢɪ ᴀᴅᴍɪɴ", url=f"https://t.me/Dhilnihnge"),
+                ],
+	    ]
+	    [
+                [
+                    InlineKeyboardButton(text="🤖 ʟɪᴍɪᴛ ʙᴏᴛ ᴏʀᴅᴇʀ", url=f"https://t.me/SiArabLimitBot"),
+                ],
+	    ]
+    ))
+
+@app.on_callback_query(filters.regex("listharga"))
+async def close(_, query: CallbackQuery):
+    await query.message.reply_text(
+       f"""<b>👋🏻 ʜᴀʟᴏ ɴɢᴇ sᴀʜᴀʙᴀᴛ @ArabStore_Robot .\n
+💭 ʟɪsᴛ ʜᴀʀɢᴀ ᴅᴇᴘʟᴏʏ ʙᴏᴛ ᴅɪ ᴀʀᴀʙ sᴛᴏʀᴇ\n
+❏ ᴊᴀsᴀ ᴅᴇᴘʟᴏʏ ᴜsᴇʀʙᴏᴛ
+├• Rᴘ. 25.000  [ VPS/1Bᴜʟᴀɴ { ᴘʀᴇᴍ } ]
+├• Rᴘ. 20.000  [ VPS/1Bᴜʟᴀɴ { ʙɪᴀsᴀ } ]</b>
+╰• {sɪsᴛᴇᴍ ᴛᴇʀɪᴍᴀ ᴊᴀᴅɪ ᴛᴀɴᴘᴀ ʟᴏɢɪɴ ᴀᴋᴜɴ }
+    
+<b>❏ ᴊᴀsᴀ ᴅᴇᴘʟᴏʏ BOT ᴍᴜsɪᴋ
+├ Rᴘ. 100.000 [ VPS/1ʙᴜʟᴀɴ ] 
+├ ᴘʟᴜs ᴛᴀɢ ᴀʟʟ
+├ ʀᴇϙ VPS 8/16 GB ɴᴀᴍʙᴀʜ ʜᴀʀɢᴀ</b> (ᴛᴀɴʏᴀ ᴀᴅᴍɪɴ)
+╰• { sɪsᴛᴇᴍ ᴛᴇʀɪᴍᴀ ᴊᴀᴅɪ }
+
+<b>❏ ᴊᴀsᴀ ᴅᴇᴘʟᴏʏ ʙᴏᴛ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ɢʀᴏᴜᴘ
+├ Rᴘ. 40.000</b>
+╰ { sɪsᴛᴇᴍ ᴛᴇʀɪᴍᴀ ᴊᴀᴅɪ }
+
+<b>❏  ᴊᴀsᴀ ᴅᴇᴘʟᴏʏ ʙᴏᴛ ғɪʟᴇ-sʜᴀʀɪɴɢ ғᴏʀᴄᴇ sᴜʙ / ᴀsᴜᴘᴀɴ CH
+├ Rᴘ. 30.000 [ VPS/1ʙᴜʟᴀɴ ] 
+├  ɴᴀᴍʙᴀʜ 1 ʙᴜᴛᴛᴏɴ +10ʀʙ
+├  BISA REQ 1 - 6 FSUB
+╰</b> { sɪsᴛᴇᴍ ᴛᴇʀɪᴍᴀ ᴊᴀᴅɪ }
+
+<b>❏ ᴊᴀsᴀ ᴅᴇᴘʟᴏʏ ʙᴏᴛ ᴍᴇɴғᴇs ғᴡʙ
+├  Rᴘ. 130.000  [ VPS/1ʙᴜʟᴀɴ ]
+├  ᴘᴇʀᴘᴀɴᴊᴀɴɢ sᴇᴛɪᴀᴘ ʙᴜʟᴀɴ 110K
+├  sᴜᴘᴘᴏʀᴛ ᴀᴠᴀ ʙᴏʏ, ɢɪʀʟ, ᴛᴀʟᴇɴᴛ, sᴜɢᴅᴀᴅ, ɢғ/ʙғ ʀᴇɴᴛ, ᴍᴏᴀɴsʙᴏʏ, ᴍᴏᴀɴsɢɪʀʟ 
+╰</b>  { sɪsᴛᴇᴍ ᴛᴇʀɪᴍᴀ ᴊᴀᴅɪ }
+
+<b>❏ ᴊᴀsᴀ ᴜᴘ ʟɪᴋᴇ, ʏᴛ ᴘʀᴇᴍ,  ɴᴏᴋᴏs ID 1/2/5, ɴᴏᴋᴏs WA ʟᴜᴀʀ/ɪɴᴅᴏ, ᴜᴘ ғᴏʟʟᴏᴡᴇʀs ᴅʟʟ
+╰</b> ( ᴛᴀɴʏᴀᴋᴀɴ ᴛᴇʀʟᴇʙɪʜ ᴅᴀʜᴜʟᴜ sᴛᴏᴄᴋ ɴʏᴀ )
+
+<b>❏ ᴄᴏɴᴛᴀᴄᴛ: @Dhilnihnge</b>""",
+	reply_markup=InlineKeyboardMarkup(
 @app.on_callback_query(filters.regex("help_u"))
 # @cb_wrapper
 async def commands_callbacc(_, cb: CallbackQuery):
