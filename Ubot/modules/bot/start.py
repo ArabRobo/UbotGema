@@ -90,7 +90,7 @@ async def start_(client: Client, message: Message):
                     InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/SiArabGroup"),
 		],
 		    [
-                    InlineKeyboardButton(text="ʟɪꜱᴛ ʜᴀʀɢᴀ ᴍᴇᴍʙᴜᴀᴛ ʙᴏᴛ ʟᴀɪɴɴʏᴀ", url=f"https://t.me/JasaSiArab/2"),
+                    InlineKeyboardButton(text="ʟɪꜱᴛ ʜᴀʀɢᴀ ᴍᴇᴍʙᴜᴀᴛ ʙᴏᴛ ʟᴀɪɴɴʏᴀ", callback_data="store"),
 		],
 		[
                      InlineKeyboardButton(text="ᴛᴜᴛᴜᴘ", callback_data="cl_ad"),
