@@ -11,6 +11,7 @@ youtube-search-python
 APScheduler==3.6.3
 aiohttp
 aiofiles==22.1.0
+pytgcalls==3.0.0.dev24
 bs4
 emoji==1.6.0
 gitpython
