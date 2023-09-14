@@ -194,7 +194,12 @@ async def close(_, query: CallbackQuery):
 ╰</b> ( ᴛᴀɴʏᴀᴋᴀɴ ᴛᴇʀʟᴇʙɪʜ ᴅᴀʜᴜʟᴜ sᴛᴏᴄᴋ ɴʏᴀ )
 
 <b>❏ ᴄᴏɴᴛᴀᴄᴛ: @Dhilnihnge</b>""",
-	reply_markup=InlineKeyboardMarkup(
+reply_markup=InlineKeyboardMarkup(
+	[
+             [
+             InlineKeyboardButton(text="🧑🏻‍💻 ʜᴜʙᴜɴɢɪ ᴀᴅᴍɪɴ", url=f"https://t.me/Dhilnihnge"),
+             ],
+	]
 @app.on_callback_query(filters.regex("help_u"))
 # @cb_wrapper
 async def commands_callbacc(_, cb: CallbackQuery):
