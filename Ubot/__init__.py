@@ -10,7 +10,6 @@ from aiohttp import ClientSession
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from gpytranslate import Translator
 from pyrogram import Client, filters, __version__, enums
-from pytgcalls import GroupCallFactory
 from ast import parse
 from .logging import LOGGER
 from config import *
