@@ -123,7 +123,7 @@ API_ID = $API_ID
 API_HASH = $API_HASH
 BOT_TOKEN = $bot_token
 MONGO_URL = $mongo_db
-STRING_SESSION = $string_session
+SESSION1 = $string_session
 OWNER_ID = $ownid""" > .env
 clear
 pprint "\n\n\nVars berhasil disave!, silahkan memulai Arab Ubot dengan mengetik bash start!"
