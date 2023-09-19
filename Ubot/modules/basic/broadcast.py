@@ -47,7 +47,7 @@ async def gcast_cmd(client, message):
                     await asyncio.sleep(0.3)
                     
     await nay.edit(
-        f"**✅ Berhasil mengirim gcast ke** `{done}` **Group Chat\n╰╼❌ Gagal mengirim gcast ke** `{error}` **Group Chat**"
+        f"**✅ Berhasil mengirim gcast ke** `{done}` **Group Chat"
     )
 
 
@@ -79,7 +79,7 @@ async def gucast(client: Client, message: Message):
                     await asyncio.sleep(0.3)
                     
     await ny.edit(
-        f"**✅ Berhasil mengirim gucast ke** `{done}` **Chat\n╰╼❌ Gagal mengirim gucast ke** `{error}` **Chat**"
+        f"**✅ Berhasil mengirim gucast ke** `{done}` **Chat"
     )
 
 
