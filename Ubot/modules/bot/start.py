@@ -72,7 +72,7 @@ XCB = [
 async def start_(client: Client, message: Message):
     ADMIN1 = ADMIN1_ID[0]
     await message.reply_text(
-        f"""<b>👋🏻 ʜᴀʟᴏ  {message.from_user.first_name} \n
+        f"""<b>👋🏻 ʜᴀʟᴏ  {message.from_user.first_name} [✨](https://te.legra.ph/file/bb36497f535ad16d72bb9.jpg)\n
 💭 ꜱᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ ᴅɪ ʙᴏᴛ ᴀʀᴀʙ ᴜꜱᴇʀʙᴏᴛ
 💬 ᴀʀᴀʙ-ᴜʙᴏᴛ ᴀᴅᴀʟᴀʜ ᴜsᴇʀʙᴏᴛ ʙᴀsᴇ ʙʏ ᴘʏʀᴏɢʀᴀᴍ ʀᴀsᴀ ᴀɴɢɢᴜʀ ᴍᴇʀᴀʜ
 
