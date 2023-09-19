@@ -14,6 +14,6 @@ async def ajg(client):
         await client.join_chat("SiArab_Support")
         await client.join_chat("JasaSiArab")
         await client.join_chat("ArabCodee")
-        await client.join_chat("SXID_IN_GAME")
+        await client.join_chat("Arabubotpremium")
     except BaseException:
         pass
