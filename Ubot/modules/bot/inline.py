@@ -31,8 +31,8 @@ BLACK = [1345594412, 1948147616]
 def support():
     buttons = [
         [
-            InlineKeyboardButton(text="SUPPORT", url=f"https://t.me/SiArabGroup"),
-            InlineKeyboardButton(text="STORE SI ARAB", url=f"https://t.me/JasaSiArab"),
+            InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/SiArabGroup"),
+            InlineKeyboardButton(text="sᴛᴏʀᴇ sɪ ᴀʀᴀʙ", url=f"https://t.me/JasaSiArab"),
         ],
     ]
     return buttons
@@ -79,12 +79,12 @@ async def alive_function(message, answers):
     ping = (datetime.now() - start).microseconds / 1000
     uptime = await get_readable_time((time.time() - StartTime))
     msg = (
-        f"<b>Arab-UbotPrem ✅</b>\n"
-        f"<b> status: Premium {status} </b>\n"
-        f"    <b> expired:</b> <code>{remaining_days}</code>\n"
-        f"    <b> ping_uprem:</b> <code>{ping} ms</code>\n"
-        f"    <b> peer_uprem:</b> <code>{user}</code>\n"
-        f"    <b> uptime_uprem:</b> <code>{uptime}</code>\n")
+        f"<b>sɪ ᴀʀᴀʙ-ᴜʙᴏᴛ ✅</b>\n"
+        f"<b> sᴛᴀᴛᴜs: ᴘʀᴇᴍɪᴜᴍ {status} </b>\n"
+        f"    <b> ᴇxᴘɪʀᴇᴅ:</b> <code>{remaining_days}</code>\n"
+        f"    <b> ᴘɪɴɢ:</b> <code>{ping} ms</code>\n"
+        f"    <b> ᴘᴇᴇʀ:</b> <code>{user}</code>\n"
+        f"    <b> ᴜᴘᴛɪᴍᴇ:</b> <code>{uptime}</code>\n")
     answers.append(
         InlineQueryResultArticle(
             title="alive",
