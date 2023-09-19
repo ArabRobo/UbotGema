@@ -8,7 +8,7 @@ load_dotenv(".env")
 
 
 API_ID = int(getenv("API_ID", "")) #optional
-API_HASH = getenv("API_HASH", "7b71e8bca") #optional
+API_HASH = getenv("API_HASH", "") #optional
 SUDO_USERS = list(map(int, getenv("SUDO_USERS", "1948147616").split()))
 DEEP_AI = getenv("DEEP_AI", "d7394561-0528-4714-a1ee-edd7020b48e1")
 OWNER_ID = int(getenv("OWNER_ID", "1948147616") or 0)
