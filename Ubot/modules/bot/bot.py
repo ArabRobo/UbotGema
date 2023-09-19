@@ -131,6 +131,9 @@ async def close(_, query: CallbackQuery):
                 [
                     InlineKeyboardButton(text="🧑🏻‍💻 ʜᴜʙᴜɴɢɪ ᴀᴅᴍɪɴ", url=f"https://t.me/Dhilnihnge"),
                 ],
+		[
+                     InlineKeyboardButton(text="ᴛᴜᴛᴜᴘ", callback_data="cl_ad"),
+                ],
 	    ]
     ))
 
