@@ -22,20 +22,20 @@ BOT_VER ="8.1.0"
 
 
 MSG_ON = """
-**Arab Uprem Actived ✅**
+**ᴀʀᴀʙ-ᴜʙᴏᴛ ᴀᴄᴛɪᴠᴇᴅ ✅**
 ╼┅━━━━━━━━━━╍━━━━━━━━━━┅╾
-↻ **Versi** : `{}`
-↻ **Phython** : `{}`
-↻ **Pyrogram** : `{}`
-↻ **Store Arab** : @SiArab_Store
-**Ketik** `alive` **untuk Mengecheck Bot**
+↻ **ᴠᴇʀsɪ** : `{}`
+↻ **ᴘʏᴛʜᴏɴ** : `{}`
+↻ **ᴘʏʀᴏɢʀᴀᴍ** : `{}`
+↻ **sᴛᴏʀᴇ ᴀʀᴀʙ** : @Jasasiarab
+**Ketik** `alive` **ᴜɴᴛᴜᴋ ᴍᴇɴɢᴇᴄʜᴇᴄᴋ ʙᴏᴛ**
 ╼┅━━━━━━━━━━╍━━━━━━━━━━┅╾
 """
 
 
 async def main():
     await app.start()
-    LOGGER("Arab Uprem").info("Memulai Arab Uprem..")
+    LOGGER("Arab Ubot").info("Memulai Arab-Ubot..")
     for all_module in ALL_MODULES:
         importlib.import_module("Ubot.modules" + all_module)
     for bot in bots:
@@ -63,7 +63,7 @@ async def main():
 
 
 if __name__ == "__main__":
-    LOGGER("Arab Ubot").info("Starting  Uprem")
+    LOGGER("Arab Ubot").info("Starting  Arab-Ubot")
     install()
     event_loop.run_until_complete(main())
 
