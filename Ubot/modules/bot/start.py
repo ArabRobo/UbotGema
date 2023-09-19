@@ -18,7 +18,6 @@ from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 from Ubot import *
 from Ubot.core.db import *
-from Ubot.core.db.accesdb import get_expired_date
 from itertools import count
 from Ubot.modules.basic import *
 from Ubot.core.db import *
@@ -44,9 +43,9 @@ load_dotenv()
 session_counter = count(1)
 
 ANU = """
-❏ **Users** Ke {}
-├╼ **Nama**: {}
-╰╼ **ID**: {}
+❏ **ᴜsᴇʀs** ᴋᴇ {}
+├╼ **ɴᴀᴍᴀ**: {}
+╰╼ **ɪᴅᴄ**: {}
 """
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -74,23 +73,18 @@ async def start_(client: Client, message: Message):
     ADMIN1 = ADMIN1_ID[0]
     await message.reply_text(
         f"""<b>👋🏻 ʜᴀʟᴏ  {message.from_user.first_name} \n
-💭 ꜱᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ ᴅɪ ʙᴏᴛ ᴀʀᴀʙ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀʙᴏᴛ
-💬 @ArabPremUbot ᴀᴅᴀʟᴀʜ ʙᴏᴛ ʏᴀɴɢ ᴀᴋᴀɴ ᴍᴇᴍᴀɴᴅᴜ ᴀɴᴅᴀ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ
+💭 ꜱᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ ᴅɪ ʙᴏᴛ ᴀʀᴀʙ ᴜꜱᴇʀʙᴏᴛ
+💬 ᴀʀᴀʙ-ᴜʙᴏᴛ ᴀᴅᴀʟᴀʜ ᴜsᴇʀʙᴏᴛ ʙᴀsᴇ ʙʏ ᴘʏʀᴏɢʀᴀᴍ ʀᴀsᴀ ᴀɴɢɢᴜʀ ᴍᴇʀᴀʜ
 
-❓ ᴀᴘᴀ ꜱᴀᴊᴀ ꜱɪʜ ꜰɪᴛᴜʀɴʏᴀ?,ᴋᴀʟᴏ ᴍᴀᴜ ʟɪʜᴀᴛ ꜰɪᴛᴜʀ ᴜʙᴏᴛɴʏᴀ, ᴋʟɪᴋ ʜᴇʟᴘ ᴍᴇɴᴜ ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ ᴍᴏᴅᴜʟᴇ ᴀʀᴀʙ ᴜꜱᴇʀʙᴏᴛ ᴘʀᴇᴍ.
-
-👉🏻 ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴅɪʙᴀᴡᴀʜ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ</b>""",
+👉🏻 ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴅɪʙᴀᴡᴀʜ ʟɪᴀᴛ sᴇsᴜᴀɪ ᴋᴇʙᴜᴛᴜʜᴀɴ</b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(text="ʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ", callback_data="buat_ub"),
+                    InlineKeyboardButton(text="ᴊᴀsᴀ ᴅᴇᴘʟᴏʏ ʙʏ sɪ ᴀʀᴀʙ", callback_data="buat_ub"),
                 ],
 		 [
-                    InlineKeyboardButton(text="ʜᴇʟᴘ ᴍᴇɴᴜ", callback_data="help_u"),
-                    InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/SiArabGroup"),
-		],
-		    [
-                    InlineKeyboardButton(text="ʟɪꜱᴛ ʜᴀʀɢᴀ ᴍᴇᴍʙᴜᴀᴛ ʙᴏᴛ ʟᴀɪɴɴʏᴀ", callback_data="store"),
+                    InlineKeyboardButton(text="ʀᴇᴘᴏ", url=""),
+                    InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/SiArab_Support"),
 		],
 		[
                      InlineKeyboardButton(text="ᴛᴜᴛᴜᴘ", callback_data="cl_ad"),
@@ -133,68 +127,6 @@ async def restart_bot(_, message: Message):
     else:
         args = [sys.executable, "-m", "Ubot"]
         execle(sys.executable, *args, environ)
- 
-@app.on_message(filters.command("prem") & ~filters.via_bot)
-async def handle_grant_access(client: Client, message: Message):
-    text = None
-    if message.reply_to_message:
-        user_id = message.reply_to_message.from_user.id
-    else:
-        text = message.text.split()
-        if len(text) < 2:
-            await message.reply_text("I can't find that user.")
-            return
-        username = text[1]
-        try:
-            user = await client.get_users(username)
-        except ValueError:
-            user = None
-        if user is None:
-            await message.reply_text(f"I can't find that user {username} .")
-            return
-        user_id = user.id
-
-    if message.from_user.id not in ADMINS:
-        await message.reply_text("only admins can grant access.")
-        return
-
-    duration = 1
-    if text is not None and len(text) >= 3:
-        try:
-            duration = int(text[2])
-        except ValueError:
-            await message.reply_text("No month_number provided.")
-            return
-
-    await check_and_grant_user_access(user_id, duration)
-    await message.reply_text(f"Done! {user_id} for {duration} month.")
-
-	
-@app.on_message(filters.command("unprem") & ~filters.via_bot)
-async def handle_revoke_access(client: Client, message: Message):
-    if message.reply_to_message:
-        user_id = message.reply_to_message.from_user.id
-    else:
-        text = message.text.split()
-        if len(text) < 2:
-            await message.reply_text("I can't find that user.")
-            return
-        username = text[1]
-        try:
-            user = await client.get_users(username)
-        except ValueError:
-            user = None
-        if user is None:
-            await message.reply_text(f"I can't find that user {username} .")
-            return
-        user_id = user.id
-
-    if message.from_user.id not in ADMINS:
-        await message.reply_text("Maaf, hanya admin yang dapat mencabut akses.")
-        return
-
-    await delete_user_access(user_id)
-    await message.reply_text(f"Akses dicabut untuk pengguna {user_id}.")
         
 @Ubot("usage", cmds)
 async def usage_dynos(client, message):
@@ -272,9 +204,9 @@ async def user(client, message):
         try:
             count += 1
             user += f"""
-❏ USERBOT KE {count}
- ├ AKUN: <a href=tg://user?id={X.me.id}>{X.me.first_name} {X.me.last_name or ''}</a> 
- ╰ ID: <code>{X.me.id}</code>
+❏ ᴜsᴇʀʙᴏᴛ ᴋᴇ {count}
+ ├ ᴀᴋᴜɴ: <a href=tg://user?id={X.me.id}>{X.me.first_name} {X.me.last_name or ''}</a> 
+ ╰ ɪᴅ: <code>{X.me.id}</code>
 """
         except:
             pass
