@@ -1,29 +1,29 @@
 {
-    "name": "Naya Pyro",
-    "description": "Nothing Speciall !!!.",
-    "logo": "https://telegra.ph//file/75acabea0a9cc6679c2d4.jpg",
+    "name": "Arab-Ubot",
+    "description": "Userbot Pyrogram rasa anggur merah",
+    "logo": "https://te.legra.ph/file/bb36497f535ad16d72bb9.jpg",
     "keywords": ["telegram", "userbot", "pyrogram"],
     "repository": "https://github.com/fadhilabdat04/ProjectArabUbot01",
     "stack": "container",
     "env": {
         "SESSION1": {
-            "description": "Isi String Pyrogram V2 Ambil Di @NayaStringBot",
+            "description": "Isi String Pyrogram V2 Ambil Di @StringrabRobot",
             "required": true
         },
         "SESSION2": {
-            "description": "Silakan Isi Jika Ingin Menggunkan 5 akun Untuk 1 App, Isi String Pyrogram V2 Ambil Di @NayaStringBot",
+            "description": "Silakan Isi Jika Ingin Menggunkan 5 akun Untuk 1 App, Isi String Pyrogram V2 Ambil Di @StringrabRobot",
             "required": false
         },
         "SESSION3": {
-            "description": "Silakan Isi Jika Ingin Menggunkan 5 akun Untuk 1 App, Isi String Pyrogram V2 Ambil Di @NayaStringBot",
+            "description": "Silakan Isi Jika Ingin Menggunkan 5 akun Untuk 1 App, Isi String Pyrogram V2 Ambil Di @StringrabRobot",
             "required": false
         },
         "SESSION4": {
-            "description": "Silakan Isi Jika Ingin Menggunkan 5 akun Untuk 1 App, Isi String Pyrogram V2 Ambil Di @NayaStringBot",
+            "description": "Silakan Isi Jika Ingin Menggunkan 5 akun Untuk 1 App, Isi String Pyrogram V2 Ambil Di @StringrabRobot",
             "required": false
         },
         "SESSION5": {
-            "description": "Silakan Isi Jika Ingin Menggunkan 5 akun Untuk 1 App, Isi String Pyrogram V2 Ambil Di @NayaStringBot",
+            "description": "Silakan Isi Jika Ingin Menggunkan 5 akun Untuk 1 App, Isi String Pyrogram V2 Ambil Di @StringrabRobot",
             "required": false
         },
         "API_ID": {
