@@ -105,6 +105,8 @@ sleep 1
 clear
 
 pprint "\nMasukan Vars berikut ini:\n\n\n"
+pprint "\nAPI ID: "; color_reset; read API_ID
+pprint "\nAPI HASH: "; color_reset; read API_HASH
 pprint "\nBOT TOKEN: "; color_reset; read bot_token
 pprint "\nMONGO URL: "; color_reset; read mongo_db
 pprint "\nPYROGRAM STRING SESSION V2: "; color_reset; read string_session
@@ -117,6 +119,8 @@ if [ -f .env ]; then
 fi
 
 echo """
+API_ID = $API_ID
+API_HASH = $API_HASH
 BOT_TOKEN = $bot_token
 MONGO_URL = $mongo_db
 STRING_SESSION = $string_session
